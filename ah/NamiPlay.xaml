@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ah.NamiPlay"
+             Title="Ahorcado">
+    
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="0"
+        Spacing="25"
+        HorizontalOptions="Center">
+
+            <HorizontalStackLayout
+            Padding="30,0"
+            Spacing="50"
+            HorizontalOptions="CenterAndExpand"
+            WidthRequest="300">
+
+                <Label Text="Puntos: 0"
+                x:Name="Pto"/>
+
+                <Label Text="00"
+               x:Name="Tiempo"
+               HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="Dificultad: 1"
+                x:Name="LabelDificulty"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+            Padding="10,0"
+            Spacing="10"
+            HorizontalOptions="CenterAndExpand"
+            WidthRequest="300">
+
+                <Label Text="Record: 0"
+                x:Name="Max"/>
+
+            </HorizontalStackLayout>
+
+
+
+            <Image Source="zero.png"
+            HeightRequest="300"
+            WidthRequest="150"
+            x:Name="Ahorcado"/>
+
+            <HorizontalStackLayout
+            HorizontalOptions="CenterAndExpand">
+                <Label Text=" 00 "
+                   x:Name="N1"
+                   FontSize="Subtitle"/>
+
+                <Label Text=" * "
+                   FontSize="Subtitle"/>
+
+                <Label Text=" 00 "
+                    x:Name="N2"
+                   FontSize="Subtitle"/>
+
+                <Label Text=" = "
+                   FontSize="Subtitle"/>
+
+                <Entry x:Name="Result"
+                   Keyboard="Numeric"
+                   WidthRequest="100"
+                   MaximumWidthRequest="100"
+                   IsEnabled="False"/>
+
+            </HorizontalStackLayout>
+
+            <Button Text="Revisar"
+            x:Name="Check"
+            Clicked="Check_Clicked"
+            IsEnabled="False"/>
+
+            <Button Text="Iniciar"
+            x:Name="Start"
+            Clicked="Start_Clicked"/>
+
+            <HorizontalStackLayout
+            Padding="0,0"
+            Spacing="15"
+            HorizontalOptions="Center">
+                <Button Text="Dificultad"
+                    x:Name="Lvl"
+                    WidthRequest="150"
+                    Clicked="Lvl_Clicked"/>
+
+                <Button Text="Personaje"
+                    x:Name="Personaje"
+                    WidthRequest="150"
+                    Clicked="Personaje_Clicked"/>
+            </HorizontalStackLayout>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

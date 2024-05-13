@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ah.SelectCharacter"
+             Title="Seleccionar Personaje">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="25">
+
+        <Label x:Name="Puntaje"
+               Text="Puntos: 0"
+               HorizontalOptions="Center"/>
+
+        <HorizontalStackLayout
+            Spacing="30"
+            HorizontalOptions="Center">
+
+            <ImageButton x:Name="Luffy"
+                Source="luffy_icon.png"
+                WidthRequest="175"
+                BorderColor="Red"
+                BorderWidth="5"
+                Clicked="SelectLuffy"/>
+
+            <ImageButton x:Name="Nami"
+                 Source="block.png"
+                 WidthRequest="175"
+                 BorderColor="Aquamarine"
+                 BorderWidth="5"
+                 IsEnabled="False"
+                 Clicked="SelectNami"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="30"
+            HorizontalOptions="Center">
+
+            <ImageButton x:Name="Zoro"
+                Source="block.png"
+                 IsEnabled="False"
+                WidthRequest="175"
+                BorderColor="DarkSeaGreen"
+                BorderWidth="5"
+                 Clicked="SelectZoro"/>
+
+             <ImageButton x:Name="Law"
+                 Source="block.png"
+                 WidthRequest="175"
+                 BorderColor="Black"
+                 IsEnabled="False"
+                 BorderWidth="5"
+                 Clicked="SelectLaw"/>
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
